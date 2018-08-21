@@ -6,10 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  * Created by Filipe on 20/08/2018.
  */
 
-@JsonIgnoreProperties({"Search/","totalResults", "Response"})
 public class Filme {
 
-    private String Search;
+
     private String Title;
     private String Year;
     private String imdbID;
@@ -18,25 +17,17 @@ public class Filme {
 
     public Filme() {}
 
-    public Filme(String title, String year, String imdbID, String type, String poster, String search) {
+    public Filme(String title, String year, String imdbID, String type, String poster) {
         Title = title;
         Year = year;
         this.imdbID = imdbID;
         Type = type;
         Poster = poster;
-        Search = search;
+
     }
 
     public String getTitle() {
         return Title;
-    }
-
-    public void setSearch(String search) {
-        Search = search;
-    }
-
-    public String getSearch() {
-        return Search;
     }
 
     public void setTitle(String title) {
@@ -77,13 +68,9 @@ public class Filme {
 
     @Override
     public String toString() {
-        return "Filme{" +
-                "Title='" + Title + '\'' +
-                ", Year='" + Year + '\'' +
-                ", imdbID='" + imdbID + '\'' +
-                ", Type='" + Type + '\'' +
-                ", Poster='" + Poster + '\'' +
-                "Search" + Search+
-                '}';
+        return  "Título: " + Title + "\n" +
+                "Year: " + Year + "\n" +
+                "imdbID: " + imdbID + "\n" +
+                "Type: " + Type + "\n";
     }
 }

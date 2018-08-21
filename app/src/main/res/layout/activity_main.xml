@@ -36,12 +36,33 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_height="match_parent"
-        android:id="@+id/tv_resposta"
-        android:textColor="#595959"
-        android:textSize="20sp"
-        android:layout_width="match_parent"/>
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progress_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_movies"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/list_item_movie"
+            android:paddingBottom="28dp" />
+    </FrameLayout>
+
+
+
+
+
 
 </LinearLayout>
 

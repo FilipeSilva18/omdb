@@ -18,7 +18,7 @@ public class RetrofitConfig {
     public RetrofitConfig() {
         this.retrofit = new Retrofit.Builder()
                 .baseUrl("http://www.omdbapi.com/")
-                .addConverterFactory(JacksonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .build();
     }
 
